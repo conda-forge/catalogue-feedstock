@@ -18,8 +18,10 @@ requirements:
   host:
     - python
     - pip
+    - importlib-metadata >=0.20
   run:
     - python
+    - importlib-metadata >=0.20
 
 test:
   # The tests aren't packaged with the library, so don't bother here.
