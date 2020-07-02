@@ -10,18 +10,17 @@ source:
   sha256: 34f8416ec5e7ed08e55c10414416e67c3f4d66edf83bc67320c3290775293816
 
 build:
-  noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - python
     - pip
-    - importlib-metadata >=0.20
   run:
     - python
-    - importlib-metadata >=0.20
+    - importlib_metadata >=0.20  # [py<=37]
+
 
 test:
   # The tests aren't packaged with the library, so don't bother here.
@@ -50,3 +49,4 @@ extra:
   recipe-maintainers:
     - honnibal
     - ines
+    - adrianeboyd
