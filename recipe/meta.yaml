@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python
-    - importlib_metadata >=0.20  # [py<=37]
+    - importlib_metadata >=0.20,<3.3.0  # [py<=37]
 
 test:
   # The tests aren't packaged with the library, so don't bother here.
