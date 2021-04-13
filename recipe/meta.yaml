@@ -1,5 +1,5 @@
 {% set name = "catalogue" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0d01077dbfca7aa53f3ef4adecccce636bce4f82e5b52237703ab2f56478e56e
+  sha256: ead4e8ad26898ff2f2e666d7a815abc55923a33b26b0b651dcc46a87dc5a6a47
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python
-    - importlib_metadata >=0.20  # [py<=37]
+    - importlib_metadata >=0.20,<3.3.0  # [py<=37]
 
 test:
   # The tests aren't packaged with the library, so don't bother here.
