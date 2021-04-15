@@ -23,7 +23,7 @@ requirements:
   run:
     - python
     - zipp >=0.5  # [py<=37]
-    - typing-extension s>=3.6.4  # [py<=37]
+    - typing-extensions >=3.6.4  # [py<=37]
 
 test:
   requires:
