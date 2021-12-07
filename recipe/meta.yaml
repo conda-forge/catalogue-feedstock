@@ -8,9 +8,10 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 336a35603f447167042ef504114d6befa46688f03f4c14dabdc633a44587b245
+  patches: patches/0001-skip-entry-points-test.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
