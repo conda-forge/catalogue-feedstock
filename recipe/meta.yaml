@@ -8,7 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b325c77659208bfb6af1b0d93b1a1aa4112e1bb29a4c5ced816758a722f0e388
-  patches: patches/0001-skip-entry-points-test.patch
 
 build:
   number: 0
